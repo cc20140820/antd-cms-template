@@ -66,10 +66,7 @@ const ActionIcons = () => {
     </>
   );
 };
-const Lang = () => {
-  const { styles } = useStyles();
-  return;
-};
+
 const LoginMessage: React.FC<{
   content: string;
 }> = ({ content }) => {
@@ -132,7 +129,6 @@ const Login: React.FC = () => {
           {'登录'}- {Settings.title}
         </title>
       </Helmet>
-      <Lang />
       <div
         style={{
           flex: '1',
@@ -196,7 +192,7 @@ const Login: React.FC = () => {
                   size: 'large',
                   prefix: <LockOutlined />,
                 }}
-                placeholder={'密码: ant.design'}
+                placeholder={'密码: 111'}
                 rules={[
                   {
                     required: true,
@@ -206,7 +202,6 @@ const Login: React.FC = () => {
               />
             </>
           )}
-
           {status === 'error' && loginType === 'mobile' && <LoginMessage content="验证码错误" />}
           {type === 'mobile' && (
             <>
